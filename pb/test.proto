@@ -1,0 +1,14 @@
+syntax = "proto3";
+package main;
+option go_package = ".;pb";
+
+service TestService {
+    rpc HelloWorld(stream HelloWorldRequest) returns (HelloWorldResponse);
+}
+
+message HelloWorldRequest {
+  string message = 1;
+}
+message HelloWorldResponse {
+  string message = 1;
+}
